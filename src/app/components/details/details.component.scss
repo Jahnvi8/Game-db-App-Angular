@@ -1,0 +1,113 @@
+.box {
+    background-color: rgb(20, 22, 24);
+    z-index: 9000;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 102%;
+    width: 98%;
+    height: 285vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 5px 0 13px;
+    box-shadow: 0px -2px 23px 21px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px -2px 23px 21px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px -2px 23px 21px rgba(0, 0, 0, 0.8);
+}
+
+.details-wrapper {
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.details {
+     ::ng-deep mwl-gauge {
+        width: 150px;
+        height: 150px;
+        display: block;
+        padding: 10px;
+        .dial {
+            stroke-width: 10;
+        }
+        .value {
+            stroke-dasharray: none;
+            stroke-width: 13;
+        }
+        .value-text {
+            fill: #b6e2ff;
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+    .game-gauge {
+        &-label {
+            font-size: 20px;
+            color: #b6e2ff;
+            position: relative;
+            font-family: fantasy;
+            bottom: 60px;
+            font-weight: 300;
+        }
+    }
+}
+
+.game {
+    &-banner {
+        height: 442px;
+        overflow: hidden;
+        &-img {
+            width: 100vw;
+            filter: opacity(0.8);
+            object-fit: cover;
+        }
+    }
+    &-content {
+        text-align: center;
+        position: relative;
+        top: -200px;
+    }
+    &-header {
+        // box-shadow: 1px -3px 63px 12px rgba(0, 0, 0, 0.58) inset;
+        // -webkit-box-shadow: 1px -3px 63px 12px rgba(0, 0, 0, 0.58) inset;
+        // -moz-box-shadow: 1px -3px 63px 12px rgba(0, 0, 0, 0.58) inset;
+        border-radius: 10px;
+        height: 180px;
+        color: #b6e2ff;
+        text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
+        letter-spacing: 2px;
+        &-title {
+            font-size: 70px;
+            font-weight: 500;
+            font-family: fantasy;
+            line-height: 70px;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+        &-release-date {
+            // color: #b6e2ff;
+            // text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
+            font-weight: 300;
+            // text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
+            font-family: fantasy;
+            letter-spacing: 2px;
+            font-size: 24px;
+        }
+        &-genres {
+            // color: #b6e2ff;
+            // text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
+            font-weight: 500;
+            font-family: fantasy;
+            font-size: 20px;
+            // text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
+        }
+    }
+    &-guage {
+        // border: 2px solid red;
+        position: absolute;
+        width: 157px;
+        float: right;
+        top: 60px;
+        right: 2%;
+    }
+}

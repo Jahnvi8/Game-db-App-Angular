@@ -1,0 +1,85 @@
+<div class="game-tabs">
+    <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
+        <mat-tab label="About">
+            <p *ngIf="game.parent_platforms?.length" class="game-tabs-par">
+                Platforms:
+                <span *ngFor="let game of game.parent_platforms; let last = last">{{ game.platform.name }}<span *ngIf="!last">, </span></span>
+            </p>
+            <p *ngIf="game.publishers?.length" class="game-tabs-par">
+                Publishers:
+                <span *ngFor="let publisher of game.publishers; let last = last">{{ publisher.name }}<span *ngIf="!last">, </span></span>
+            </p>
+            <p *ngIf="game.website" class="game-tabs-par">
+                Website:
+                <a class="game-tabs-link" href="{{ game.website }}" target="_blank">{{
+            game.website
+          }}</a>
+            </p>
+            <div class="game-description" [innerHTML]="game.description"></div>
+            <p class="game-tabs-votes">
+                <ng-container *ngFor="let rating of game.ratings">
+                    <span *ngIf="rating.title === 'exceptional'">
+              <mat-icon class="game-votes-up">thumb_up</mat-icon>
+              <span class="game-votes-count">{{ rating.count || 0 }}</span>
+                    </span>
+                    <span *ngIf="rating.title === 'skip'">
+              <mat-icon class="game-votes-down">thumb_down</mat-icon>
+              <span class="game-votes-count">{{ rating.count || 0 }}</span>
+                    </span>
+                </ng-container>
+            </p>
+        </mat-tab>
+        <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
+            <img class="game-screenshot" *ngFor="let screenshot of game.screenshots" src="{{ screenshot.image }}" alt="screenshot" />
+        </mat-tab>
+        <mat-tab label="Trailers" *ngIf="game.trailers?.length">
+            <video class="game-trailer" controls *ngFor="let trailer of game.trailers">
+          <source src="{{ trailer.data?.max }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        </mat-tab>
+    </mat-tab-group>
+
+
+    <!-- --------------------------- -->
+    <div class="new">
+        <div id="myModal">
+            <!--Modal-->
+            <div class="modal_dialog">
+                <div class="modal_content">
+                    <div class="modal_header">
+                        <h3>Feedback Request</h3>
+
+                    </div>
+                    <div class="opinion"> <i class="far fa-file-alt fa-4x mb-3 animated rotateIn icon1"></i>
+                        <h3>Your opinion matters</h3>
+                        <h4>Help us improve our product? <strong>Give us your feedback.</strong></h4>
+                        <hr>
+                        <h4>Your Rating</h4>
+                    </div>
+                    <!-- Radio Buttons for Rating-->
+                    <div class="rating">
+                        <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Very good</label> </div>
+                        <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Good</label> </div>
+                        <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Mediocre</label> </div>
+                        <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Bad</label> </div>
+                        <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Very Bad</label> </div>
+                    </div>
+
+                    <!--Text Message-->
+                    <div class="improve">
+                        <h3>What could we improve?</h3>
+                    </div> <textarea type="textarea" placeholder="Your Message" rows="3" style="width: 68.1vw;"></textarea>
+                    <!-- Modal Footer-->
+                    <div class="modal-footer" style="width: 68.1vw;">
+
+                        <a href=" " class="btn btn-primary buttons" onclick="javascript: alert('Thankyou for your feedback.\nYour response is successfully saved.')">Send</a>
+
+
+                        <a href=" " class="btn btn-outline-primary buttons ">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

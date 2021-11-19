@@ -1,0 +1,29 @@
+.container-fluid {
+    overflow: hidden;
+    position: absolute;
+    left: 17%;
+    top: 21%;
+    height: 75%;
+    width: 82%;
+}
+
+.inner {
+    position: absolute;
+    width: 100%;
+}
+
+video {
+    width: 100% !important;
+    height: 74.6vh !important;
+    object-fit: cover;
+    z-index: -100;
+}
+
+.side {
+    display: inline;
+    position: absolute;
+    bottom: 0%;
+    h2 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+}

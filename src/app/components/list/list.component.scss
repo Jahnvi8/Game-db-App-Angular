@@ -1,0 +1,113 @@
+.filters {
+    max-width: 1250px;
+    margin: 45% 2.6%;
+    padding-left: 10px;
+}
+
+@media(max-width:920px) {
+    #sorting {
+        max-width: 100px;
+    }
+}
+
+::ng-deep {
+    .mat-form-field-infix {
+        background: linear-gradient( 90deg, #21a2ff40 0%, #21a2ff26 50%, #32323300 100%);
+    }
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        color: #fff !important;
+        opacity: 1;
+    }
+    .mat-form-field-infix {
+        border-color: #fff !important;
+        border-top: none;
+        padding-left: 5px !important;
+        width: 200px !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        padding-left: 5px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: #fff !important;
+    }
+}
+
+.list {
+    position: absolute;
+    top: 99%;
+    margin: 20px;
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.game {
+    top: 0;
+    width: 270px;
+    margin: 15px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: rgb(46, 95, 128);
+    background: linear-gradient(90deg, rgba(46, 95, 128, 0.9897001036742822) 7%, #18394e 87%);
+    box-shadow: 4px 3px 8px 0 rgb(43, 41, 37);
+    transition-duration: 0.3s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 4px 3px 11px 6px rgb(15, 18, 20);
+        transform: scale(1.1);
+    }
+    &-thumb-container {
+        position: relative;
+        height: 172px;
+        color: #fff;
+        text-align: center;
+    }
+    &-thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 195px;
+        object-fit: cover;
+        transition: all 0.3s;
+    }
+    &-description {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 157px;
+    }
+    &-name {
+        color: #b9d6e9;
+        font-weight: 300;
+        font-size: 22px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    &-platforms {
+        display: flex;
+    }
+    &-platform {
+        width: 20px;
+        height: 20px;
+        margin-left: 4.6px;
+    }
+}

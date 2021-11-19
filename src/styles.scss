@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding-top: 60px;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);
+    background: linear-gradient(to left, #4CA1AF, #2C3E50);
+}
+
+body * {
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

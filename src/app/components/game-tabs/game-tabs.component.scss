@@ -1,0 +1,110 @@
+.game {
+    &-tabs {
+        background: rgb(63 81 181 / 61%);
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        &-par {
+            padding: 22px 22px 0 22px;
+            margin-bottom: 0;
+        }
+        &-link {
+            color: #fff;
+        }
+        &-votes {
+            margin-left: 20px;
+            display: flex;
+            &-count {
+                margin-left: 5px;
+            }
+        }
+         ::ng-deep .mat-tab-labels {
+            justify-content: center;
+        }
+    }
+    &-votes {
+        &-up {
+            color: #5ee432;
+        }
+        &-down {
+            color: #ef4655;
+        }
+        &-count {
+            margin-left: 5px;
+            margin-right: 10px;
+            vertical-align: super;
+        }
+    }
+    &-description {
+        padding: 20px;
+        font-family: fantasy;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+    &-screenshot {
+        margin-top: 5px;
+        width: calc(50% - 10px);
+        &:nth-child(even) {
+            margin-left: 10px;
+        }
+    }
+    &-trailer {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.new {
+    margin-left: .5%;
+}
+
+.modal_dialog {
+    height: 50%;
+    width: 50%;
+}
+
+.modal_header {
+    color: white;
+    background-color: #e91e63;
+    position: relative;
+    width: 68.2vw;
+    height: 40px;
+    h3 {
+        display: flex;
+        text-transform: uppercase;
+        font-size: large;
+        padding: 3px;
+        justify-content: center;
+    }
+}
+
+.opinion {
+    position: absolute;
+    text-align: center;
+    margin-left: 27.3%;
+    padding: 2px;
+}
+
+.rating {
+    position: relative;
+    margin-top: 34%;
+    margin-left: 6%;
+}
+
+textarea {
+    border: none;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    outline: 0px !important
+}
+
+.improve {
+    position: relative;
+    width: 68.2vw;
+    height: 40px;
+    text-align: center;
+}
+
+.buttons {
+    margin: 10px;
+}
